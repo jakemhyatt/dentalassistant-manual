@@ -1693,7 +1693,10 @@ function switchSub(loc,sub){
     const matchTab=labBody.querySelector('.sub-tab[onclick*="\''+sub+'\'"]');
     const matchBody=document.getElementById('sub-lab-'+sub);
     if(matchTab) matchTab.classList.add('active');
-    if(matchBody) matchBody.classList.add('active');
+    if(matchBody){
+      matchBody.classList.add('active');
+      requestAnimationFrame(()=>matchBody.querySelectorAll('textarea.editable').forEach(autoResize));
+    }
     return;
   }
   // Fillings sub-tabs
@@ -1704,7 +1707,10 @@ function switchSub(loc,sub){
   const matchTab=locEl.querySelector('.sub-tab[onclick*="\''+sub+'\'"]');
   const matchBody=document.getElementById('sub-'+loc+'-'+sub);
   if(matchTab) matchTab.classList.add('active');
-  if(matchBody) matchBody.classList.add('active');
+  if(matchBody){
+    matchBody.classList.add('active');
+    requestAnimationFrame(()=>matchBody.querySelectorAll('textarea.editable').forEach(autoResize));
+  }
 }
 
 // ═══ NAVIGATION ═══
