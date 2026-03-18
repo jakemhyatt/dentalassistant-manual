@@ -524,9 +524,10 @@ function buildExamPanel(){
       </div>
 
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
-        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photo</div>
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;align-items:start">
+        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
           <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
             <div class="photo-placeholder" id="photo-exam-comp" onclick="triggerUpload('exam-comp')" style="min-height:140px">
               <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
             </div>
@@ -534,7 +535,15 @@ function buildExamPanel(){
             <button class="photo-upload-btn" onclick="triggerUpload('exam-comp')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
             <textarea class="photo-caption" id="caption-exam-comp" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
           </div>
-          <div style="font-size:12px;color:var(--text-light);line-height:1.6;padding-top:4px">Upload a photo of your comprehensive exam tray setup for quick visual reference.</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+            <div class="photo-placeholder" id="photo-exam-comp-asst" onclick="triggerUpload('exam-comp-asst')" style="min-height:140px">
+              <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
+            </div>
+            <input type="file" id="file-exam-comp-asst" accept="image/*" onchange="loadPhoto('exam-comp-asst', this)">
+            <button class="photo-upload-btn" onclick="triggerUpload('exam-comp-asst')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
+            <textarea class="photo-caption" id="caption-exam-comp-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+          </div>
         </div>
       </div>
 
@@ -592,9 +601,10 @@ function buildExamPanel(){
       </div>
 
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
-        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photo</div>
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;align-items:start">
+        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
           <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
             <div class="photo-placeholder" id="photo-exam-limited" onclick="triggerUpload('exam-limited')" style="min-height:140px">
               <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
             </div>
@@ -602,7 +612,15 @@ function buildExamPanel(){
             <button class="photo-upload-btn" onclick="triggerUpload('exam-limited')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
             <textarea class="photo-caption" id="caption-exam-limited" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
           </div>
-          <div style="font-size:12px;color:var(--text-light);line-height:1.6;padding-top:4px">Upload a photo of your limited exam tray setup for quick visual reference.</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+            <div class="photo-placeholder" id="photo-exam-limited-asst" onclick="triggerUpload('exam-limited-asst')" style="min-height:140px">
+              <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
+            </div>
+            <input type="file" id="file-exam-limited-asst" accept="image/*" onchange="loadPhoto('exam-limited-asst', this)">
+            <button class="photo-upload-btn" onclick="triggerUpload('exam-limited-asst')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
+            <textarea class="photo-caption" id="caption-exam-limited-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+          </div>
         </div>
       </div>
 
@@ -706,12 +724,15 @@ function buildCrownsPanel(){
           <input type="file" id="file-crown-sd-burs" accept="image/*" onchange="loadPhoto('crown-sd-burs', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('crown-sd-burs')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-crown-sd-burs" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-crown-sd-asst" onclick="triggerUpload('crown-sd-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-crown-sd-asst" accept="image/*" onchange="loadPhoto('crown-sd-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('crown-sd-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-crown-sd-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div></div>
-          
-          
-          <textarea class="photo-caption" id="caption-crown-sd-mill" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
-        </div>
-      </div>
     </div>
 
       <!-- Workflow timeline -->
@@ -898,9 +919,9 @@ function buildCrownsPanel(){
       </div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Seat Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-crown-lab-seat" onclick="triggerUpload('crown-lab-seat')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
@@ -908,19 +929,37 @@ function buildCrownsPanel(){
           <button class="photo-upload-btn" onclick="triggerUpload('crown-lab-seat')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-crown-lab-seat" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-crown-lab-seat-asst" onclick="triggerUpload('crown-lab-seat-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-crown-lab-seat-asst" accept="image/*" onchange="loadPhoto('crown-lab-seat-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('crown-lab-seat-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-crown-lab-seat-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div>
       </div>
     </div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Prep Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-crown-lab-prep" onclick="triggerUpload('crown-lab-prep')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-crown-lab-prep" accept="image/*" onchange="loadPhoto('crown-lab-prep', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('crown-lab-prep')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-crown-lab-prep" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-crown-lab-prep-asst" onclick="triggerUpload('crown-lab-prep-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-crown-lab-prep-asst" accept="image/*" onchange="loadPhoto('crown-lab-prep-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('crown-lab-prep-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-crown-lab-prep-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div>
       </div>
     </div>
@@ -1093,9 +1132,10 @@ function buildPanels(){
       </div>
       ${adaBadge(proc.adaCodes)}
       <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
-        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photo</div>
-        <div style="display:grid;grid-template-columns:1fr 2fr;gap:16px;align-items:start">
+        <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start">
           <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
             <div class="photo-placeholder" id="photo-${proc.id}" onclick="triggerUpload('${proc.id}')" style="min-height:140px">
               <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
             </div>
@@ -1103,8 +1143,14 @@ function buildPanels(){
             <button class="photo-upload-btn" onclick="triggerUpload('${proc.id}')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
             <textarea class="photo-caption" id="caption-${proc.id}" placeholder="Caption for this setup photo…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
           </div>
-          <div style="font-size:12px;color:var(--text-light);line-height:1.6;padding-top:4px">
-            Upload a photo of your tray setup for <strong style="color:var(--cd-blue)">${proc.title}</strong>. This will appear here as a quick visual reference for assistants when setting up for this procedure.
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+            <div class="photo-placeholder" id="photo-${proc.id}-asst" onclick="triggerUpload('${proc.id}-asst')" style="min-height:140px">
+              <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload tray photo</strong></div>
+            </div>
+            <input type="file" id="file-${proc.id}-asst" accept="image/*" onchange="loadPhoto('${proc.id}-asst', this)">
+            <button class="photo-upload-btn" onclick="triggerUpload('${proc.id}-asst')" style="font-size:11px;padding:7px 14px">📸 Upload Photo</button>
+            <textarea class="photo-caption" id="caption-${proc.id}-asst" placeholder="Caption for this setup photo…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
           </div>
         </div>
       </div>
@@ -1164,15 +1210,23 @@ function buildFillingsPanel(){
         <div class="sub-label-bar" style="background:linear-gradient(90deg,#1d5a8a,#1d7ab0)"><span>🦷 Anterior — Facial · Class V</span><span class="sub-note">D2330 · D2390 · labial surface decay</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-fill-ant-facial" onclick="triggerUpload('fill-ant-facial')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-fill-ant-facial" accept="image/*" onchange="loadPhoto('fill-ant-facial', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-facial')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-fill-ant-facial" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-fill-ant-facial-asst" onclick="triggerUpload('fill-ant-facial-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-fill-ant-facial-asst" accept="image/*" onchange="loadPhoto('fill-ant-facial-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-facial-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-fill-ant-facial-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div><div style="display:flex;flex-direction:column;gap:8px">
           <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Bur Kit</div>
           <div class="photo-placeholder" id="photo-fill-burs-anterior" onclick="triggerUpload('fill-burs-anterior')" style="min-height:140px">
@@ -1200,15 +1254,23 @@ function buildFillingsPanel(){
         <div class="sub-label-bar" style="background:linear-gradient(90deg,#1d6a5a,#1d9a7a)"><span>🦷 Anterior — Interproximal · Class III</span><span class="sub-note">D2331 · D2332 · mesial or distal contact area</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-fill-ant-interprox" onclick="triggerUpload('fill-ant-interprox')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-fill-ant-interprox" accept="image/*" onchange="loadPhoto('fill-ant-interprox', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-interprox')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-fill-ant-interprox" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-fill-ant-interprox-asst" onclick="triggerUpload('fill-ant-interprox-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-fill-ant-interprox-asst" accept="image/*" onchange="loadPhoto('fill-ant-interprox-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-interprox-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-fill-ant-interprox-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div><div style="display:flex;flex-direction:column;gap:8px">
           <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Bur Kit</div>
           <div class="photo-placeholder" id="photo-fill-burs-anterior-ip" onclick="triggerUpload('fill-burs-anterior-ip')" style="min-height:140px">
@@ -1236,15 +1298,23 @@ function buildFillingsPanel(){
         <div class="sub-label-bar" style="background:linear-gradient(90deg,#5a1d8a,#8a2ab0)"><span>🦷 Anterior — Cosmetic / Direct Bonding</span><span class="sub-note">D2335 · diastema closure · chip repair · reshaping</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-fill-ant-cosmetic" onclick="triggerUpload('fill-ant-cosmetic')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-fill-ant-cosmetic" accept="image/*" onchange="loadPhoto('fill-ant-cosmetic', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-cosmetic')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-fill-ant-cosmetic" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-fill-ant-cosmetic-asst" onclick="triggerUpload('fill-ant-cosmetic-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-fill-ant-cosmetic-asst" accept="image/*" onchange="loadPhoto('fill-ant-cosmetic-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('fill-ant-cosmetic-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-fill-ant-cosmetic-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div><div style="display:flex;flex-direction:column;gap:8px">
           <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Shade & Polish</div>
           <div class="photo-placeholder" id="photo-fill-burs-anterior-cos" onclick="triggerUpload('fill-burs-anterior-cos')" style="min-height:140px">
@@ -1279,15 +1349,23 @@ function buildFillingsPanel(){
         <div class="sub-label-bar" style="background:linear-gradient(90deg,#1d4a8a,#1d6ab0)"><span>🦷 Posterior — Occlusal / Buccal · Class I</span><span class="sub-note">D2391 · pit &amp; fissure decay · buccal pit lesions · same setup for both</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-fill-post-occ" onclick="triggerUpload('fill-post-occ')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-fill-post-occ" accept="image/*" onchange="loadPhoto('fill-post-occ', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('fill-post-occ')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-fill-post-occ" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-fill-post-occ-asst" onclick="triggerUpload('fill-post-occ-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-fill-post-occ-asst" accept="image/*" onchange="loadPhoto('fill-post-occ-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('fill-post-occ-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-fill-post-occ-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div><div style="display:flex;flex-direction:column;gap:8px">
           <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Bur Setup</div>
           <div class="photo-placeholder" id="photo-fill-burs-posterior-occ" onclick="triggerUpload('fill-burs-posterior-occ')" style="min-height:140px">
@@ -1315,15 +1393,23 @@ function buildFillingsPanel(){
         <div class="sub-label-bar" style="background:linear-gradient(90deg,#7a3a10,#b05010)"><span>🦷 Posterior — Interproximal MO / DO / MOD · Class II</span><span class="sub-note">D2392 · D2393 · D2394 · contact-area decay requiring Palodent matrix system</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-fill-post-interprox" onclick="triggerUpload('fill-post-interprox')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-fill-post-interprox" accept="image/*" onchange="loadPhoto('fill-post-interprox', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('fill-post-interprox')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-fill-post-interprox" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div><div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-fill-post-interprox-asst" onclick="triggerUpload('fill-post-interprox-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-fill-post-interprox-asst" accept="image/*" onchange="loadPhoto('fill-post-interprox-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('fill-post-interprox-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-fill-post-interprox-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div><div style="display:flex;flex-direction:column;gap:8px">
           <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Bur Setup</div>
           <div class="photo-placeholder" id="photo-fill-burs-posterior-ip" onclick="triggerUpload('fill-burs-posterior-ip')" style="min-height:140px">
@@ -1375,15 +1461,24 @@ function buildOralSurgeryPanel(){
       <div class="sub-label-bar" style="background:linear-gradient(90deg,#1d3461,#1d6ab0)"><span>🦷 Simple Extraction · D7140</span><span class="sub-note">Erupted tooth with intact crown — select tooth number below for specific forcep</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-os-simple" onclick="triggerUpload('os-simple')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-os-simple" accept="image/*" onchange="loadPhoto('os-simple', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('os-simple')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-os-simple" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-os-simple-asst" onclick="triggerUpload('os-simple-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-os-simple-asst" accept="image/*" onchange="loadPhoto('os-simple-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('os-simple-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-os-simple-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div>
       </div>
     </div>
@@ -1423,15 +1518,24 @@ function buildOralSurgeryPanel(){
       <div class="sub-label-bar" style="background:linear-gradient(90deg,#5a1a1a,#9a2020)"><span>⚕️ Surgical Extraction · D7210 · D7220 · D7230 · D7240</span><span class="sub-note">Requires flap, sectioning, or bone removal — impacted and non-restorable teeth</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Surgical Tray Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-os-surgical" onclick="triggerUpload('os-surgical')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-os-surgical" accept="image/*" onchange="loadPhoto('os-surgical', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('os-surgical')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-os-surgical" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-os-surgical-asst" onclick="triggerUpload('os-surgical-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-os-surgical-asst" accept="image/*" onchange="loadPhoto('os-surgical-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('os-surgical-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-os-surgical-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div>
       </div>
     </div>
@@ -1470,15 +1574,24 @@ function buildOralSurgeryPanel(){
       <div class="sub-label-bar" style="background:linear-gradient(90deg,#1a5a1a,#2a8a2a)"><span>🦴 Socket Preservation / Ridge Preservation · D7953</span><span class="sub-note">Bone graft placed at time of extraction to maintain ridge volume for future implant or prosthetic</span></div>
 <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;margin-bottom:18px;box-shadow:var(--shadow-sm)">
       <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px">📷 Tray Setup Photos</div>
-      <div style="display:grid;grid-template-columns:1fr;gap:16px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div style="display:flex;flex-direction:column;gap:8px">
-          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Graft & Membrane Setup</div>
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Doc's Tray Setup</div>
           <div class="photo-placeholder" id="photo-os-socket" onclick="triggerUpload('os-socket')" style="min-height:140px">
             <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
           </div>
           <input type="file" id="file-os-socket" accept="image/*" onchange="loadPhoto('os-socket', this)">
           <button class="photo-upload-btn" onclick="triggerUpload('os-socket')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
           <textarea class="photo-caption" id="caption-os-socket" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--cd-blue);text-transform:uppercase;letter-spacing:.06em">Assistant's Tray Setup</div>
+          <div class="photo-placeholder" id="photo-os-socket-asst" onclick="triggerUpload('os-socket-asst')" style="min-height:140px">
+            <div class="upload-hint"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg><strong style="font-size:12px">Click to upload photo</strong></div>
+          </div>
+          <input type="file" id="file-os-socket-asst" accept="image/*" onchange="loadPhoto('os-socket-asst', this)">
+          <button class="photo-upload-btn" onclick="triggerUpload('os-socket-asst')" style="font-size:11px;padding:7px 14px">📸 Upload</button>
+          <textarea class="photo-caption" id="caption-os-socket-asst" placeholder="Caption…" oninput="markDirty()" style="height:38px;font-size:12px"></textarea>
         </div>
       </div>
     </div>
